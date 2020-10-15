@@ -5,85 +5,45 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
-    @Test
-    void should_return_1_when_count_off_given_order_number_1(){
+    void fizzBuzzWhizzTest(int orderNumber, String output){
         //given
-        int orderNumber = 1;
         FizzBuzz fizzBuzz = new FizzBuzz();
         //when
         String actual = fizzBuzz.countOff(orderNumber);
         //then
-        assertEquals("1", actual);
+        assertEquals(output, actual);
+    }
+    @Test
+    void should_return_1_when_count_off_given_order_number_1(){
+        fizzBuzzWhizzTest(1, "1");
     }
     @Test
     void should_return_fizz_when_count_off_given_order_number_3(){
-        //given
-        int orderNumber = 3;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        //when
-        String actual = fizzBuzz.countOff(orderNumber);
-        //then
-        assertEquals("Fizz", actual);
+        fizzBuzzWhizzTest(3, "Fizz");
     }
     @Test
     void should_return_buzz_when_count_off_given_order_number_5(){
-        //given
-        int orderNumber = 5;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        //when
-        String actual = fizzBuzz.countOff(orderNumber);
-        //then
-        assertEquals("Buzz", actual);
+        fizzBuzzWhizzTest(5, "Buzz");
     }
     @Test
     void should_return_fizzbuzz_when_count_off_given_order_number_15(){
-        //given
-        int orderNumber = 15;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        //when
-        String actual = fizzBuzz.countOff(orderNumber);
-        //then
-        assertEquals("FizzBuzz", actual);
+        fizzBuzzWhizzTest(15, "FizzBuzz");
     }
     @Test
     void should_return_fizzbuzzwhizz_when_count_off_given_order_number_105(){
-        //given
-        int orderNumber = 105;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        //when
-        String actual = fizzBuzz.countOff(orderNumber);
-        //then
-        assertEquals("FizzBuzzWhizz", actual);
+        fizzBuzzWhizzTest(105, "FizzBuzzWhizz");
     }
     @Test
     void should_return_buzzwhizz_when_count_off_given_order_number_35(){
-        //given
-        int orderNumber = 35;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        //when
-        String actual = fizzBuzz.countOff(orderNumber);
-        //then
-        assertEquals("BuzzWhizz", actual);
+        fizzBuzzWhizzTest(35, "BuzzWhizz");
     }
     @Test
     void should_return_fizzwhizz_when_count_off_given_order_number_21(){
-        //given
-        int orderNumber = 21;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        //when
-        String actual = fizzBuzz.countOff(orderNumber);
-        //then
-        assertEquals("FizzWhizz", actual);
+        fizzBuzzWhizzTest(21, "FizzWhizz");
     }
     @Test
     void should_return_whizz_when_count_off_given_order_number_7(){
-        //given
-        int orderNumber = 7;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        //when
-        String actual = fizzBuzz.countOff(orderNumber);
-        //then
-        assertEquals("Whizz", actual);
+        fizzBuzzWhizzTest(7, "Whizz");
     }
 
 }
