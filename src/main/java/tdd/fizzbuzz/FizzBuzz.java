@@ -15,7 +15,7 @@ public class FizzBuzz {
         if(orderNumber%BUZZ_MODULO==0)
             output += BUZZ;
         if(orderNumber%WHIZZ_MODULO==0)
-            return WHIZZ;
+            output += WHIZZ;
         return output.equals("") ? String.valueOf(orderNumber): output;
     }
 }
