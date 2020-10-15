@@ -10,12 +10,15 @@ public class FizzBuzz {
 
     public String countOff(int orderNumber) {
         String output = "";
-        if(orderNumber%FIZZ_MODULO==0)
-            output += FIZZ;
-        if(orderNumber%BUZZ_MODULO==0)
-            output += BUZZ;
-        if(orderNumber%WHIZZ_MODULO==0)
-            output += WHIZZ;
+        output = getOutputOnCount(orderNumber, output, FIZZ_MODULO, FIZZ);
+        output = getOutputOnCount(orderNumber, output, BUZZ_MODULO, BUZZ);
+        output = getOutputOnCount(orderNumber, output, WHIZZ_MODULO, WHIZZ);
         return output.equals("") ? String.valueOf(orderNumber): output;
+    }
+
+    private String getOutputOnCount(int orderNumber, String output, int modulo, String concat) {
+        if(orderNumber%modulo==0)
+            return output += concat;
+        return output;
     }
 }
