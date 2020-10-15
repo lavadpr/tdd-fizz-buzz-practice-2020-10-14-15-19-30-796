@@ -2,12 +2,13 @@ package tdd.fizzbuzz;
 
 public class FizzBuzz {
     public String countOff(int orderNumber) {
+        String output = "";
         if(orderNumber%3==0)
-            return "Fizz";
+            output += "Fizz";
         if(orderNumber%5==0)
-            return "Buzz";
+            output += "Buzz";
         if(orderNumber%7==0)
             return "Whizz";
-        return String.valueOf(orderNumber);
+        return output.equals("") ? String.valueOf(orderNumber): output;
     }
 }
