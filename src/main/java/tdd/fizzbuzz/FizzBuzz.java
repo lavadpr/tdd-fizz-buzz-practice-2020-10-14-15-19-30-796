@@ -13,11 +13,11 @@ public class FizzBuzz {
         output = getOutputOnCount(orderNumber, output, FIZZ_MODULO, FIZZ);
         output = getOutputOnCount(orderNumber, output, BUZZ_MODULO, BUZZ);
         output = getOutputOnCount(orderNumber, output, WHIZZ_MODULO, WHIZZ);
-        return output.equals("") ? String.valueOf(orderNumber): output;
+        return output.equals("") ? String.valueOf(orderNumber) : output;
     }
 
     private String getOutputOnCount(int orderNumber, String output, int modulo, String concat) {
-        if(orderNumber%modulo==0)
+        if (orderNumber % modulo == 0)
             return output += concat;
         return output;
     }
